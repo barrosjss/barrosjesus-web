@@ -4,14 +4,14 @@ const Data = () => {
     return (
         <div className="home_data">
             <h1 className="home_title">
-                Jesus Barros
+                John Smith
                 <svg
                     width="36"
                     height="36"
                     viewBox="0 0 48 48"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="home__hand"
+                    class="home_hand"
                 >
                     <path
                         d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"
@@ -56,10 +56,10 @@ const Data = () => {
                 </svg>
             </h1>
             <h3 className="home_subtitle">
-                Entrepreneur | Software Developer
+                Entrepreneur | Developer
             </h3>
             <p className="home_description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             </p>
             <a href="#contact" className="button button--flex">
                 Say Hello
