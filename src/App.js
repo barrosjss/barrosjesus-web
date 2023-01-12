@@ -3,6 +3,7 @@ import './App.css'
 
 import Header from './components/header/Header.jsx'
 import Home from './components/home/Home'
+import About from './components/about/About'
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <Header />
       <main className='main'>
         <Home />
+        <About />
       </main>
     </>
   )
