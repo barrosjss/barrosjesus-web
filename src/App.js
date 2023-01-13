@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/header/Header.jsx'
 import Home from './components/home/Home'
 import About from './components/about/About'
+import Skills from './components/skills/Skills'
 
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <main className='main'>
         <Home />
         <About />
+        <Skills />
       </main>
     </>
   )
