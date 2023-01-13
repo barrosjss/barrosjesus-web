@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
 
-import Header from './components/header/Header.jsx'
+import Header from './components/header/Header'
 import Home from './components/home/Home'
 import About from './components/about/About'
 import Skills from './components/skills/Skills'
+import Services from './components/services/Services'
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Home />
         <About />
         <Skills />
+        <Services />
       </main>
     </>
   )
