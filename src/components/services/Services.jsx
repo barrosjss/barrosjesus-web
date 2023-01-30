@@ -1,191 +1,245 @@
-import React from 'react'
+import React, { useState } from "react";
+import "./services.css";
 
 const Services = () => {
-    return (
-        <section className="services section" id="services">
-            <h2 className="section_title">Services</h2>
-            <span className="section_subtitle">What i offer</span>
-            <div className='services_container container grid'>
+  const [toggleState, setToggleState] = useState(0);
 
-                <div className="services_content">
-                    <div>
-                        <i className="uil uil-web-grid services_icon"></i>
-                        <h3 className="services_title">Entrepreneur | Developer</h3>
-                    </div>
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
 
-                    <span className="services_button">
-                        View More <i className="uil uil-arrow-right services_button-icon"></i>
-                    </span>
+  return (
+    <section className="services section" id="services">
+      <h2 className="section_title">Services</h2>
+      <span className="section_subtitle">What i offer</span>
+      <div className="services_container container grid">
+        <div className="services_content">
+          <div>
+            <i className="uil uil-web-grid services_icon"></i>
+            <h3 className="services_title">Entrepreneur | Developer</h3>
+          </div>
 
-                    <div className="services_modal">
-                        <div className="services_modal-content">
-                            <i className="uil uil-times services_modal-close"></i>
+          <span className="services_button" onClick={() => toggleTab(1)}>
+            View More
+            <i className="uil uil-arrow-right services_button-icon"></i>
+          </span>
 
-                            <h3 className="services_modal-title">Product Designer</h3>
-                            <p className="services_modal-description">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
+          <div
+            className={
+              toggleState === 1
+                ? "services_modal active-modal"
+                : "services_modal"
+            }
+          >
+            <div className="services_modal-content">
+              <i
+                onClick={() => toggleTab(0)}
+                className="uil uil-times services_modal-close"
+              ></i>
 
-                            <ul className="services_modal-services grid">
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
+              <h3 className="services_modal-title">Product Designer</h3>
+              <p className="services_modal-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
 
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
+              <ul className="services_modal-services grid">
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
 
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
 
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
 
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
 
-                <div className="services_content">
-                    <div>
-                        <i className="uil uil-arrow services_icon"></i>
-                        <h3 className="services_title">Entrepreneur | Developer</h3>
-                    </div>
-
-                    <span className="services_button">
-                        View More <i className="uil uil-arrow-right services_button-icon"></i>
-                    </span>
-
-                    <div className="services_modal">
-                        <div className="services_modal-content">
-                            <i className="uil uil-times services_modal-close"></i>
-
-                            <h3 className="services_modal-title">UI / UX Designer</h3>
-                            <p className="services_modal-description">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
-
-                            <ul className="services_modal-services grid">
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="services_content">
-                    <div>
-                        <i className="uil uil-edit services_icon"></i>
-                        <h3 className="services_title">Entrepreneur | Developer</h3>
-                    </div>
-
-                    <span className="services_button">
-                        View More <i className="uil uil-arrow-right services_button-icon"></i>
-                    </span>
-
-                    <div className="services_modal">
-                        <div className="services_modal-content">
-                            <i className="uil uil-times services_modal-close"></i>
-
-                            <h3 className="services_modal-title">Visual Design</h3>
-                            <p className="services_modal-description">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
-
-                            <ul className="services_modal-services grid">
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-
-                                <li className="services_modal-service">
-                                    <i className="uil uil-check-circle services_modal-icon"></i>
-                                    <p className="services_modal-info">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+              </ul>
             </div>
-        </section>
-    )
-}
+          </div>
+        </div>
 
-export default Services
+        <div className="services_content">
+          <div>
+            <i className="uil uil-arrow services_icon"></i>
+            <h3 className="services_title">Entrepreneur | Developer</h3>
+          </div>
+
+          <span className="services_button" onClick={() => toggleTab(2)}>
+            View More
+            <i className="uil uil-arrow-right services_button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 2
+                ? "services_modal active-modal"
+                : "services_modal"
+            }
+          >
+            <div className="services_modal-content">
+              <i
+                className="uil uil-times services_modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+
+              <h3 className="services_modal-title">UI / UX Designer</h3>
+              <p className="services_modal-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+
+              <ul className="services_modal-services grid">
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="services_content">
+          <div>
+            <i className="uil uil-edit services_icon"></i>
+            <h3 className="services_title">Entrepreneur | Developer</h3>
+          </div>
+
+          <span className="services_button" onClick={() => toggleTab(3)}>
+            View More
+            <i className="uil uil-arrow-right services_button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 3
+                ? "services_modal active-modal"
+                : "services_modal"
+            }
+          >
+            <div className="services_modal-content">
+              <i
+                className="uil uil-times services_modal-close"
+                onClick={() => toggleTab(0)}
+              ></i>
+
+              <h3 className="services_modal-title">Visual Design</h3>
+              <p className="services_modal-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+
+              <ul className="services_modal-services grid">
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+
+                <li className="services_modal-service">
+                  <i className="uil uil-check-circle services_modal-icon"></i>
+                  <p className="services_modal-info">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
